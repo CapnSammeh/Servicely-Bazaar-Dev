@@ -24,7 +24,7 @@ export default function ItemCard({ item }) {
       className="group bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden"
     >
       {/* Card header strip */}
-      <div className="h-1.5 bg-gradient-to-r from-blue-500 to-blue-400" />
+      <div className={`h-1.5 bg-gradient-to-r ${item.status === 'pending' ? 'from-amber-400 to-amber-300' : item.status === 'rejected' ? 'from-red-500 to-red-400' : 'from-blue-500 to-blue-400'}`} />
 
       <div className="p-5 flex flex-col flex-1">
         {/* Icon + category */}
@@ -32,9 +32,21 @@ export default function ItemCard({ item }) {
           <div className="w-10 h-10 rounded-lg bg-[#0f172a] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
             {initials}
           </div>
-          <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${categoryStyle}`}>
-            {item.category}
-          </span>
+          <div className="flex items-center gap-1.5 flex-wrap justify-end">
+            {item.status === 'pending' && (
+              <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-amber-100 text-amber-700">
+                Pending Review
+              </span>
+            )}
+            {item.status === 'rejected' && (
+              <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-red-100 text-red-700">
+                Rejected
+              </span>
+            )}
+            <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${categoryStyle}`}>
+              {item.category}
+            </span>
+          </div>
         </div>
 
         {/* Name */}

@@ -169,6 +169,7 @@ export function useGitHub() {
       category,
       tags: tags.filter(Boolean),
       createdAt: now,
+      status: 'pending',
       latestVersion: version,
       issueNumber,
       versions: [
@@ -177,6 +178,7 @@ export function useGitHub() {
           path: `v${version}/changeset.xml`,
           notes: versionNotes,
           createdAt: now,
+          status: 'pending',
         },
       ],
     }
@@ -210,7 +212,7 @@ export function useGitHub() {
     const now = new Date().toISOString()
     const updatedManifest = {
       ...manifest,
-      latestVersion: version,
+      // latestVersion stays at the last approved version until this one is approved
       versions: [
         ...manifest.versions,
         {
@@ -218,6 +220,7 @@ export function useGitHub() {
           path: `v${version}/changeset.xml`,
           notes,
           createdAt: now,
+          status: 'pending',
         },
       ],
     }
@@ -240,6 +243,83 @@ export function useGitHub() {
     return updatedManifest
   }
 
+  /** Compare two semver strings, returns true if a > b */
+  function semverGt(a, b) {
+    const pa = a.split('.').map(Number)
+    const pb = b.split('.').map(Number)
+    for (let i = 0; i < 3; i++) {
+      if ((pa[i] || 0) > (pb[i] || 0)) return true
+      if ((pa[i] || 0) < (pb[i] || 0)) return false
+    }
+    return false
+  }
+
+  /**
+   * Approve a specific version of an item.
+   * Marks the version as approved, updates latestVersion if this is newer,
+   * and marks the item itself as approved if it was pending.
+   */
+  async function approveVersion(slug, version) {
+    const manifestPath = `${MARKETPLACE_PATH}/${slug}/manifest.json`
+    const manifestSha = await getFileSha(manifestPath)
+    const manifest = await fetchManifest(slug)
+
+    const updatedVersions = manifest.versions.map((v) =>
+      v.version === version ? { ...v, status: 'approved', reviewNote: undefined } : v
+    )
+
+    const newLatest =
+      manifest.status === 'pending' || semverGt(version, manifest.latestVersion)
+        ? version
+        : manifest.latestVersion
+
+    const updatedManifest = {
+      ...manifest,
+      status: 'approved',
+      latestVersion: newLatest,
+      versions: updatedVersions,
+    }
+
+    await putFile({
+      path: manifestPath,
+      message: `chore: approve ${slug} v${version}`,
+      content: JSON.stringify(updatedManifest, null, 2),
+      sha: manifestSha,
+    })
+
+    return updatedManifest
+  }
+
+  /**
+   * Reject a specific version (or entire item if it's the first version).
+   */
+  async function rejectVersion(slug, version, reviewNote) {
+    const manifestPath = `${MARKETPLACE_PATH}/${slug}/manifest.json`
+    const manifestSha = await getFileSha(manifestPath)
+    const manifest = await fetchManifest(slug)
+
+    const updatedVersions = manifest.versions.map((v) =>
+      v.version === version ? { ...v, status: 'rejected', reviewNote } : v
+    )
+
+    // If the item itself was pending (first submission), mark it rejected too
+    const isFirstSubmission = manifest.status === 'pending'
+    const updatedManifest = {
+      ...manifest,
+      ...(isFirstSubmission ? { status: 'rejected', reviewNote } : {}),
+      versions: updatedVersions,
+    }
+
+    await putFile({
+      path: manifestPath,
+      message: `chore: reject ${slug} v${version}`,
+      content: JSON.stringify(updatedManifest, null, 2),
+      sha: manifestSha,
+    })
+
+    return updatedManifest
+  }
+
   return {
     octokit,
     fetchAllItems,
@@ -253,5 +333,7 @@ export function useGitHub() {
     postIssueComment,
     uploadNewItem,
     uploadNewVersion,
+    approveVersion,
+    rejectVersion,
   }
 }

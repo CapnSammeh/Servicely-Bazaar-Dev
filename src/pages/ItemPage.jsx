@@ -20,7 +20,7 @@ export default function ItemPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const { fetchManifest, fetchVersionFile, downloadFile } = useGitHub()
-  const { user } = useAuth()
+  const { user, isAdmin } = useAuth()
 
   const [item, setItem] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -68,6 +68,18 @@ export default function ItemPage() {
     )
   }
 
+  const isOwner = user?.login === item.author
+  const canSeeItem = isAdmin || isOwner || item.status === 'approved'
+
+  if (!canSeeItem) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-20 text-center">
+        <p className="text-slate-600 font-medium mb-2">Item not found</p>
+        <Link to="/" className="text-blue-600 hover:underline text-sm">Back to marketplace</Link>
+      </div>
+    )
+  }
+
   const categoryStyle = CATEGORY_COLORS[item.category] || CATEGORY_COLORS.Other
   const initials = item.name
     .split(' ')
@@ -86,6 +98,34 @@ export default function ItemPage() {
         </svg>
         <span className="text-slate-700 font-medium">{item.name}</span>
       </nav>
+
+      {/* Review status banners */}
+      {item.status === 'pending' && (
+        <div className="mb-6 flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
+          <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <p className="text-sm font-semibold text-amber-800">Pending review</p>
+            <p className="text-sm text-amber-700 mt-0.5">
+              This item is awaiting approval from a marketplace admin before it becomes publicly visible.
+            </p>
+          </div>
+        </div>
+      )}
+      {item.status === 'rejected' && (
+        <div className="mb-6 flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl px-5 py-4">
+          <svg className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <p className="text-sm font-semibold text-red-800">Submission rejected</p>
+            {item.reviewNote && (
+              <p className="text-sm text-red-700 mt-0.5">{item.reviewNote}</p>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Header card */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">

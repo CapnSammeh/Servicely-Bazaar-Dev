@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 
 export default function Header() {
-  const { user, login, logout } = useAuth()
+  const { user, login, logout, isAdmin } = useAuth()
 
   return (
     <header className="bg-[#0f172a] text-white shadow-lg sticky top-0 z-50">
@@ -41,6 +41,18 @@ export default function Header() {
                 }
               >
                 Upload
+              </NavLink>
+            )}
+            {isAdmin && (
+              <NavLink
+                to="/review"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-blue-400'
+                    : 'text-slate-300 hover:text-white transition-colors'
+                }
+              >
+                Review
               </NavLink>
             )}
           </nav>

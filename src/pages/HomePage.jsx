@@ -11,7 +11,7 @@ const SORTS = [
 ]
 
 export default function HomePage() {
-  const { user, login } = useAuth()
+  const { user, login, isAdmin } = useAuth()
   const { fetchAllItems } = useGitHub()
   const [searchParams, setSearchParams] = useSearchParams()
 
@@ -51,7 +51,14 @@ export default function HomePage() {
   }, [])
 
   const filtered = useMemo(() => {
-    let result = [...items]
+    let result = items.filter((i) => {
+      // Admins see everything
+      if (isAdmin) return true
+      // Authors see their own items regardless of status
+      if (user && i.author === user.login) return true
+      // Everyone else only sees approved items
+      return i.status === 'approved'
+    })
 
     if (category !== 'All') {
       result = result.filter((i) => i.category === category)

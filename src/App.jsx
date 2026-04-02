@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import ItemPage from './pages/ItemPage'
 import UploadPage from './pages/UploadPage'
 import CallbackPage from './pages/CallbackPage'
+import ReviewPage from './pages/ReviewPage'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
               <Route path="/item/:slug" element={<ItemPage />} />
               <Route path="/upload" element={<UploadPage />} />
               <Route path="/callback" element={<CallbackPage />} />
+              <Route path="/review" element={<ReviewPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

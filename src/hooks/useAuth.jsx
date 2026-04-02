@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react'
 import { Octokit } from '@octokit/rest'
-import { GITHUB_CLIENT_ID } from '../config'
+import { GITHUB_CLIENT_ID, REPO_OWNER, REPO_NAME } from '../config'
 
 const AuthContext = createContext(null)
 
@@ -14,6 +14,7 @@ export function AuthProvider({ children }) {
     return stored ? JSON.parse(stored) : null
   })
   const [loading, setLoading] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false)
 
   // Fetch user profile when token changes
   useEffect(() => {
@@ -25,6 +26,11 @@ export function AuthProvider({ children }) {
         .then(({ data }) => {
           setUser(data)
           localStorage.setItem(USER_KEY, JSON.stringify(data))
+          // Check collaborator status
+          return octokit.rest.repos
+            .checkCollaborator({ owner: REPO_OWNER, repo: REPO_NAME, username: data.login })
+            .then(() => setIsAdmin(true))
+            .catch(() => setIsAdmin(false))
         })
         .catch(() => {
           // Token is invalid — clear it
@@ -42,6 +48,7 @@ export function AuthProvider({ children }) {
   const logout = useCallback(() => {
     setToken(null)
     setUser(null)
+    setIsAdmin(false)
     localStorage.removeItem(TOKEN_KEY)
     localStorage.removeItem(USER_KEY)
   }, [])
@@ -52,7 +59,7 @@ export function AuthProvider({ children }) {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ user, token, loading, login, logout, storeToken }}>
+    <AuthContext.Provider value={{ user, token, loading, isAdmin, login, logout, storeToken }}>
       {children}
     </AuthContext.Provider>
   )
