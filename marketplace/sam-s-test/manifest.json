@@ -1,0 +1,19 @@
+{
+  "id": "sam-s-test",
+  "name": "Sam's Test",
+  "description": "This is a test upload",
+  "author": "CapnSammeh",
+  "category": "Workflows",
+  "tags": [],
+  "createdAt": "2026-04-02T00:14:43.412Z",
+  "latestVersion": "1.0.0",
+  "issueNumber": 1,
+  "versions": [
+    {
+      "version": "1.0.0",
+      "path": "v1.0.0/changeset.xml",
+      "notes": "Initial release",
+      "createdAt": "2026-04-02T00:14:43.412Z"
+    }
+  ]
+}
