@@ -26,7 +26,11 @@ export function AuthProvider({ children }) {
         .then(({ data }) => {
           setUser(data)
           localStorage.setItem(USER_KEY, JSON.stringify(data))
-          // Check collaborator status
+          // Repo owner is always an admin; collaborators also qualify
+          if (data.login === REPO_OWNER) {
+            setIsAdmin(true)
+            return
+          }
           return octokit.rest.repos
             .checkCollaborator({ owner: REPO_OWNER, repo: REPO_NAME, username: data.login })
             .then(() => setIsAdmin(true))
