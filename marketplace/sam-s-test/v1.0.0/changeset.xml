@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <records>
+    <ChangeSet id="31efae9f295b11f1b6de6a6cbd357f46">
+      <Conflicts>0</Conflicts>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:31:58.144Z</CreatedOn>
+      <DefaultApplication>0a01010a40cc1dde8140cc9df97c0000</DefaultApplication>
+      <ExcludeTableFilter/>
+      <IncludeTableFilter/>
+      <Name>(SVLY) List Status Dots</Name>
+      <PreviousTransition>open.closed</PreviousTransition>
+      <PreviousWorkflowStatus>open</PreviousWorkflowStatus>
+      <SID>bL2ow5jFl0JglP</SID>
+      <TableClass>ChangeSet</TableClass>
+      <Type>local</Type>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-30T21:18:18.087Z</UpdatedOn>
+      <Version>9</Version>
+      <WorkflowStatus>closed</WorkflowStatus>
+      <id>31efae9f295b11f1b6de6a6cbd357f46</id>
+    </ChangeSet>
+    <ApplicationDefinition id="0a01010a40cc1dde8140cc9df97c0000">
+      <AutoUpdateSpecification/>
+      <AvailableVersion>1.11.57</AvailableVersion>
+      <Category>production</Category>
+      <CreatedBy>0a01010f43091ca081430985781f0000</CreatedBy>
+      <CreatedOn>2025-12-10T00:47:30.456Z</CreatedOn>
+      <GitHash>2ac5d58d57a883a520bd6421a1e2c10dc0cb7310</GitHash>
+      <GitUri/>
+      <InstalledVersion>1.11.57</InstalledVersion>
+      <IsLocaleApplication>false</IsLocaleApplication>
+      <IsSystemApplication>false</IsSystemApplication>
+      <Locale/>
+      <Name>platform</Name>
+      <Namespace>servicely.platform</Namespace>
+      <SID>BB5Qx49tpXJjBJ</SID>
+      <State>deployed</State>
+      <TableClass>ApplicationDefinition</TableClass>
+      <Type>git_built_in</Type>
+      <UpdatedBy>0a01010f43091ca081430985781f0000</UpdatedBy>
+      <UpdatedOn>2026-03-12T20:27:50.012Z</UpdatedOn>
+      <Version>15</Version>
+      <id>0a01010a40cc1dde8140cc9df97c0000</id>
+    </ApplicationDefinition>
+    <ApplicationDefinition id="c0a8016c680c1e3481680c30a8e60002">
+      <AutoUpdateSpecification/>
+      <AvailableVersion>1.11.52</AvailableVersion>
+      <Category>production</Category>
+      <CreatedBy/>
+      <CreatedOn>2025-12-10T00:47:30.178Z</CreatedOn>
+      <GitHash>5755e724ca062b04737b305944b9683a82e2459f</GitHash>
+      <GitUri/>
+      <InstalledVersion>1.11.52</InstalledVersion>
+      <IsLocaleApplication>false</IsLocaleApplication>
+      <IsSystemApplication>false</IsSystemApplication>
+      <Locale/>
+      <Name>work</Name>
+      <Namespace>servicely.work</Namespace>
+      <SID>er9e6aYUd6xEax</SID>
+      <State>deployed</State>
+      <TableClass>ApplicationDefinition</TableClass>
+      <Type>git_built_in</Type>
+      <UpdatedBy>0a01010f43091ca081430985781f0000</UpdatedBy>
+      <UpdatedOn>2026-03-09T12:28:12.894Z</UpdatedOn>
+      <Version>9</Version>
+      <id>c0a8016c680c1e3481680c30a8e60002</id>
+    </ApplicationDefinition>
+    <ChangeSetItem id="63ed1d69295c11f1b6de6a6cbd357f46">
+      <Application>0a01010a40cc1dde8140cc9df97c0000</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:40:21.541Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>4a64dcd5295c11f1b6de6a6cbd357f46</RecordID>
+      <RecordJSON>{
+  "Active" : true,
+  "CSS" : ".fs-list-dot-gc-completed::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 5px;\n    margin-right: 3px;\n    margin-top: 8px;\n    padding-top: 10px;\n    background-color: orange;\n}",
+  "CreatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "CreatedOn" : "2026-03-26T21:40:21.502Z",
+  "Name" : "Glencore - Completed List Color",
+  "SID" : "ZglEbwJhpxmvvv",
+  "StyleName" : "fs-list-dot-gc-completed",
+  "TableClass" : "NamedStyle",
+  "UpdatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "UpdatedOn" : "2026-03-26T21:47:03.358Z",
+  "Version" : 9,
+  "id" : "4a64dcd5295c11f1b6de6a6cbd357f46"
+}</RecordJSON>
+      <SID>jW6eYQJSgRJWWW</SID>
+      <Table>NamedStyle</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-26T21:47:03.377Z</UpdatedOn>
+      <Version>1</Version>
+      <id>63ed1d69295c11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+    <ChangeSetItem id="647d937b295b11f1b6de6a6cbd357f46">
+      <Application>0a01010a40cc1dde8140cc9df97c0000</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:33:12.993Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>646ddbfd295b11f1b6de6a6cbd357f46</RecordID>
+      <RecordJSON>{
+  "Active" : true,
+  "Application" : "0a01010a40cc1dde8140cc9df97c0000",
+  "CreatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "CreatedOn" : "2026-03-26T21:33:12.894Z",
+  "Description" : "Glencore customised collection of functions to assist with the Work Table + extended tables. ",
+  "Name" : "GlencoreWorkServerUtil",
+  "SID" : "6Vym3g8hbkoGg4",
+  "Script" : "(function(undefined) {\n    let GlencoreWorkServerUtil = function() {\n        return this;\n    };\n\n    let log = Logger(\"GlencoreWorkServerUtil\");\n\n    /**\n     * Gets any field styles for the Number field based on various factors of the current record\n     *\n     * @param {Table record} currentRec - The current record for the styling.\n     *\n     * @returns {Object} stylingObj - The object that holds the styling required.\n     *\n     */\n    GlencoreWorkServerUtil.getNumberFieldStyle = function(currentRec) {\n\n        let classes = [];\n\n        // HR Cases\n        if (currentRec.getTableName() == \"HRCase\") {\n            // If it's Completed, we use the Green Status Dot\n            if(currentRec.WorkflowStatus() == \"completed\"){\n                classes.push(\"fs-list-dot-gc-completed\");\n            } else \n            // Same if it's closed\n            if(currentRec.WorkflowStatus() == \"closed\"){\n                classes.push(\"fs-list-dot-gc-completed\");\n            } else\n            // Orange if it's New\n            if(currentRec.WorkflowStatus() == \"new\"){\n                classes.push(\"fs-list-dot-gc-new\");\n            } else\n            // Red if it's WIP\n            if(currentRec.WorkflowStatus() == \"work_in_progress\"){\n                classes.push(\"fs-list-dot-gc-wip\");\n            } else\n            // Blue if we're awaiting\n            if(currentRec.WorkflowStatus().includes(\"awaiting\")){\n                classes.push(\"fs-list-dot-gc-awaiting\");\n            }\n\n        }\n\n        //If it's an incident, we style based on if it's a major incident or children of one.\n        if (currentRec.getTableName() == \"Incident\") {\n\n            //If it's major, make the text bold.\n            if (currentRec.MajorIncident()) {\n                classes.push(\"fs-font-bold\");\n            }\n\n            //If it's a child of a major incident, make the number italics.\n            if (currentRec.RelatedIncident()) {\n                classes.push(\"fs-font-italic\");\n            }\n        }\n\n        if (currentRec.ReviewRequired()) {\n            classes.push(\"fs-list-dot-info\");\n        }\n\n        return classes;\n    };\n\n    // Standard 'require' vs 'include' type construct\n    if (typeof module !== \"undefined\" &amp;&amp; module.exports) {\n        module.exports = GlencoreWorkServerUtil;\n    }\n    return GlencoreWorkServerUtil;\n\n})();\n",
+  "TableClass" : "ScriptLibrary",
+  "UpdatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "UpdatedOn" : "2026-03-30T22:14:36.504+01:00",
+  "Version" : 25,
+  "id" : "646ddbfd295b11f1b6de6a6cbd357f46"
+}</RecordJSON>
+      <SID>8Kk8oepsNBlo2Q</SID>
+      <Table>ScriptLibrary</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-30T21:14:36.556Z</UpdatedOn>
+      <Version>1</Version>
+      <id>647d937b295b11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+    <ChangeSetItem id="681a1b46295b11f1b6de6a6cbd357f46">
+      <Application>0a01010a40cc1dde8140cc9df97c0000</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:33:19.050Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>681623a5295b11f1b6de6a6cbd357f46</RecordID>
+      <RecordJSON>{
+  "CreatedBy" : "0a01010f43091ca081430985781f0000",
+  "CreatedOn" : "2026-03-26T21:33:19.024Z",
+  "Generated" : true,
+  "Name" : "GlencoreWorkServerUtil",
+  "RelatedID" : "646ddbfd295b11f1b6de6a6cbd357f46",
+  "RelatedRecord" : "646ddbfd295b11f1b6de6a6cbd357f46:ScriptLibrary",
+  "SID" : "0VbgLK6fBpRkYZ",
+  "Script" : "export = GlencoreWorkServerUtil;\ndeclare function GlencoreWorkServerUtil(): any;\ndeclare namespace GlencoreWorkServerUtil {\n    /**\n     * Gets any field styles for the Number field based on various factors of the current record\n     *\n     * @param {Table record} currentRec - The current record for the styling.\n     *\n     * @returns {Object} stylingObj - The object that holds the styling required.\n     *\n     */\n    function getNumberFieldStyle(currentRec: any): any;\n}\n",
+  "SourceField" : "Script",
+  "SourceHash" : "68ea15731cb1fbcce3e764f8ded5c72e5dfb2fe1",
+  "TableClass" : "SystemTypeDeclarationScript",
+  "UpdatedBy" : "0a01010f43091ca081430985781f0000",
+  "UpdatedOn" : "2026-03-26T21:55:07.569Z",
+  "Version" : 21,
+  "id" : "681623a5295b11f1b6de6a6cbd357f46"
+}</RecordJSON>
+      <SID>gNomnNguBLnloa</SID>
+      <Table>SystemTypeDeclarationScript</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-30T21:14:36.589Z</UpdatedOn>
+      <Version>1</Version>
+      <id>681a1b46295b11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+    <ChangeSetItem id="694de070295b11f1b6de6a6cbd357f46">
+      <Application>c0a8016c680c1e3481680c30a8e60002</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:33:21.067Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>c0a8016c689c1bc581689c9d59e8376d</RecordID>
+      <RecordJSON>{
+  "Active" : false,
+  "Application" : "c0a8016c680c1e3481680c30a8e60002",
+  "CreatedBy" : "4028818a3b214291013b21504a000000",
+  "CreatedOn" : "2020-01-01T02:38:04.981Z",
+  "Description" : "A collection of functions to assist with the Work Table + extended tables. ",
+  "Name" : "WorkServerUtil",
+  "SID" : "3BkaN5ZuWZ4Qo",
+  "Script" : "(function(undefined) {\n    let WorkServerUtil = function() {\n        return this;\n    };\n\n    let log = Logger(\"WorkServerUtil\");\n\n    /**\n     * Gets any field styles for the Number field based on various factors of the current record\n     *\n     * @param {Table record} currentRec - The current record for the styling.\n     *\n     * @returns {Object} stylingObj - The object that holds the styling required.\n     *\n     */\n    WorkServerUtil.getNumberFieldStyle = function(currentRec) {\n\n        let classes = [];\n\n        //If it's an incident, we style based on if it's a major incident or children of one.\n        if (currentRec.getTableName() == \"Incident\") {\n\n            //If it's major, make the text bold.\n            if (currentRec.MajorIncident()) {\n                classes.push(\"fs-font-bold\");\n            }\n\n            //If it's a child of a major incident, make the number italics.\n            if (currentRec.RelatedIncident()) {\n                classes.push(\"fs-font-italic\");\n            }\n        }\n\n        if (currentRec.ReviewRequired()) {\n            classes.push(\"fs-list-dot-info\");\n        }\n\n        return classes;\n    };\n\n    // Standard 'require' vs 'include' type construct\n    if (typeof module !== \"undefined\" &amp;&amp; module.exports) {\n        module.exports = WorkServerUtil;\n    }\n    return WorkServerUtil;\n\n})();\n",
+  "TableClass" : "ScriptLibrary",
+  "UpdatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "UpdatedOn" : "2026-03-26T21:33:21.037Z",
+  "Version" : 3,
+  "id" : "c0a8016c689c1bc581689c9d59e8376d"
+}</RecordJSON>
+      <SID>DrYYXBYFmN9L35</SID>
+      <Table>ScriptLibrary</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-26T21:33:21.067Z</UpdatedOn>
+      <Version>1</Version>
+      <id>694de070295b11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+    <ChangeSetItem id="694ea3c1295b11f1b6de6a6cbd357f46">
+      <Application>0a01010a40cc1dde8140cc9df97c0000</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:33:21.072Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>2c5451c2d56211f0a5add294310b78d1</RecordID>
+      <RecordJSON>{
+  "CreatedBy" : "0a01010f43091ca081430985781f0000",
+  "CreatedOn" : "2025-12-10T00:50:07.572Z",
+  "Generated" : true,
+  "Name" : "WorkServerUtil",
+  "RelatedID" : "c0a8016c689c1bc581689c9d59e8376d",
+  "RelatedRecord" : "c0a8016c689c1bc581689c9d59e8376d:ScriptLibrary",
+  "SID" : "mAlLLW9tmLQ6rg",
+  "Script" : "export = WorkServerUtil;\ndeclare function WorkServerUtil(): any;\ndeclare namespace WorkServerUtil {\n    /**\n     * Gets any field styles for the Number field based on various factors of the current record\n     *\n     * @param {Table record} currentRec - The current record for the styling.\n     *\n     * @returns {Object} stylingObj - The object that holds the styling required.\n     *\n     */\n    function getNumberFieldStyle(currentRec: any): any;\n}\n",
+  "SourceField" : "Script",
+  "SourceHash" : "15cfeaea2a48ccf3c89645cca8885e315a838c7a",
+  "TableClass" : "SystemTypeDeclarationScript",
+  "UpdatedBy" : "0a01010f43091ca081430985781f0000",
+  "UpdatedOn" : "2025-12-10T00:50:07.572Z",
+  "Version" : 1,
+  "id" : "2c5451c2d56211f0a5add294310b78d1"
+}</RecordJSON>
+      <SID>8ZdGydXTNBlo23</SID>
+      <Table>SystemTypeDeclarationScript</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-26T21:33:21.072Z</UpdatedOn>
+      <Version>1</Version>
+      <id>694ea3c1295b11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+    <ChangeSetItem id="7a6f2e4c295d11f1b6de6a6cbd357f46">
+      <Application>0a01010a40cc1dde8140cc9df97c0000</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:48:08.800Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>6d91301aece611f089acceb366d738ca</RecordID>
+      <RecordJSON>{
+  "BaseStyle" : "7f000001722b130181722ba537be02ca",
+  "CSS" : "/* 1.11 Mods */\n/* Remove UI Toggle for Admins */\n[cssclass=\"toggle-enhanced-ui\"] {\n    display: none !important;\n}\n\n/* Fix Email Client Toolbar Overflow */\n.e-rte-toolbar {\n    overflow-x: scroll;\n}\n\n/* End 1.11 Mods */\n\n// Remove SOFI Shopping Cart Icons from Search Results\n.sofi-record__list__item--related-catalogue-item .sofi-related__label:before {\n    display: none !important;\n}\n\n.sofi-related__exerpt:after {\n    display: none !important;\n}\n\n/*Helps with the introductory text that is typically ontop of the hero image. */\n.portal-search__welcome, .portal-search__welcome-question, .suggested_searches_label{\n  color: #FFFFFF;\n  text-shadow: 2px 2px 2px #000000;\n}\n/* Suggested Search Options for Sofi */\n.suggested_searches {\n    color: #FFFFFF !important;\n    text-shadow: 1px 1px 5px #000000 !important;\n    text-decoration: underline;\n    text-decoration-thickness: 3px;\n    display: none;\n}\n\n/* Suggested Searches Entries */\n.suggested_searches_entry {\n    color: #FFFFFF !important;\n    text-shadow: 1px 1px 5px #000000 !important;\n    text-decoration: underline;\n    text-decoration-thickness: 3px;\n}\n\n/* Can be used to invert the colors of the Logo - helpful for logos that are white */\n.login-header img {\n    /* filter: invert(1); */\n}\n\n/* Gives the Catalog and Category Icons a bit of extra margin */\n.sb-portal-catalog__category-img-wrapper {\n    margin-bottom: 1em !important;\n}\n\n/*Determines where the hero/background image is positioned on the homepage*/\n.sb-portal::before {\n  background-size: cover !important;\n  background-position: right top !important;\n}\n\n.portal-list__block_wrapper {\n    background-color: #F4F1F0;\n}\n\n.portal-list__secondary-button {\n    color: black !important;\n    border-color: black !important;\n}\n\n.generic-link__wrapper[_ngcontent-pag-c457]:after {\n    background-color: var(--primary) !important;\n}\n\n.toggle-carousel[_ngcontent-mas-c376] > .toggle-value.is-active[_ngcontent-mas-c376] {\n    color: black !important;\n}\n\n.toggle-carousel[_ngcontent-mas-c376] > .toggle-value.is-active[_ngcontent-mas-c376] {\n    color: black !important;\n}\n\n\n// Glencore List Status Icons\n.fs-list-dot-gc-completed::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 5px;\n    margin-right: 3px;\n    margin-top: 8px;\n    padding-top: 10px;\n    background-color: green !important;\n}\n.fs-list-dot-gc-new::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 5px;\n    margin-right: 3px;\n    margin-top: 8px;\n    padding-top: 10px;\n    background-color: #FBAC11 !important;\n}\n.fs-list-dot-gc-awaiting::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 5px;\n    margin-right: 3px;\n    margin-top: 8px;\n    padding-top: 10px;\n    background-color: #18BFED !important;\n}\n.fs-list-dot-gc-wip::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 5px;\n    margin-right: 3px;\n    margin-top: 8px;\n    padding-top: 10px;\n    background-color: red !important;\n}",
+  "CreatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "CreatedOn" : "2026-01-08T23:05:33.672Z",
+  "Default" : false,
+  "MenuBackgroundColor" : "#FFF",
+  "MenuSectionBackgroundColor" : "#ECF8F7",
+  "MenuSubsectionBackgroundColor" : "#ECF8F7",
+  "MenuSubsectionTextColor" : "#000",
+  "MenuTextColor" : "#000",
+  "Name" : "Glencore HR",
+  "PrimaryBrightColor" : "#000",
+  "PrimaryColor" : "#02B5AB",
+  "SID" : "8gL653QcNWK1NE",
+  "SecondaryBrightColor" : "#02B5AB",
+  "SecondaryColor" : "#02B5AB",
+  "SiteHeaderBackgroundColor" : "#FFF",
+  "SiteHeaderTextColor" : "#000",
+  "TableClass" : "PortalStyle",
+  "TableColor" : "#02B5AB",
+  "UpdatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "UpdatedOn" : "2026-03-30T22:17:40.485+01:00",
+  "Version" : 77,
+  "id" : "6d91301aece611f089acceb366d738ca"
+}</RecordJSON>
+      <SID>ZJDmyxrIpxmvPr</SID>
+      <Table>PortalStyle</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-30T21:17:40.524Z</UpdatedOn>
+      <Version>1</Version>
+      <id>7a6f2e4c295d11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+    <ChangeSetItem id="f8f75f2f295b11f1b6de6a6cbd357f46">
+      <Application>c0a8016c680c1e3481680c30a8e60002</Application>
+      <Changeset>31efae9f295b11f1b6de6a6cbd357f46</Changeset>
+      <CreatedBy>e19242b2ece511f089acceb366d738ca</CreatedBy>
+      <CreatedOn>2026-03-26T21:37:22.092Z</CreatedOn>
+      <Operation>update</Operation>
+      <PromoteNonConfigurationRecord>false</PromoteNonConfigurationRecord>
+      <RecordID>c0a8016c680c132481680c863ffb0007</RecordID>
+      <RecordJSON>{
+  "AllowEmptyValues" : true,
+  "Application" : "c0a8016c680c1e3481680c30a8e60002",
+  "CreatedBy" : "4028818a3b214291013b21504a000000",
+  "CreatedOn" : "2020-01-01T03:05:51.404Z",
+  "FieldName" : "Number",
+  "FieldType" : "auto_seq_number",
+  "Indexed" : true,
+  "Length" : 0,
+  "Properties" : {
+    "css" : "script:GlencoreWorkServerUtil.getNumberFieldStyle(current)",
+    "default.requiredField" : "false",
+    "default.value" : "POST_ALLOCATION",
+    "i18n.name" : "work.number.name"
+  },
+  "ReadOnly" : true,
+  "Renderer" : "textfield",
+  "SID" : "d6WBpvNUGZQr6",
+  "Table" : "c0a8016c680c132481680c863fa60001",
+  "TableClass" : "FieldDefinition",
+  "Unique" : true,
+  "UpdatedBy" : "e19242b2ece511f089acceb366d738ca",
+  "UpdatedOn" : "2026-03-26T21:37:22.013Z",
+  "Version" : 3,
+  "id" : "c0a8016c680c132481680c863ffb0007"
+}</RecordJSON>
+      <SID>goXB2oGuBLnl0m</SID>
+      <Table>FieldDefinition</Table>
+      <TableClass>ChangeSetItem</TableClass>
+      <UpdatedBy>e19242b2ece511f089acceb366d738ca</UpdatedBy>
+      <UpdatedOn>2026-03-26T21:37:22.092Z</UpdatedOn>
+      <Version>1</Version>
+      <id>f8f75f2f295b11f1b6de6a6cbd357f46</id>
+    </ChangeSetItem>
+  </records>
+</root>
